@@ -1,5 +1,7 @@
 package be.bstorm.akimts.demo;
 
+import java.util.Scanner;
+
 public class DemoBoucle {
 
     public static void main(String[] args) {
@@ -14,6 +16,22 @@ public class DemoBoucle {
             // CODE
         }
 
+        for (int i = 0; i < 5 ; i++) {
+            System.out.println("Je casse un oeuf");
+        }
+
+        String choix;
+        Scanner sc = new Scanner( System.in );
+        do {
+            choix = sc.nextLine();
+        } while ( !choix.equals("quitter") );
+
+
+//        Scanner sc = new Scanner( System.in );
+//        String choix = sc.nextLine();
+//        while (!choix.equals("quitter")){
+//            choix = sc.nextLine();
+//        }
     }
 
 }

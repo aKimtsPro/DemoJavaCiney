@@ -3,27 +3,19 @@ package be.bstorm.akimts.demo.exo;
 import java.util.Random;
 import java.util.Scanner;
 
-public class ToucheCoule2 {
-
+public class ToucheCoule3 {
     public static void main(String[] args) {
 
 
         // 01 - eau(inv./visi.) 23 - bateau(inv./visi.)
-        int[][] plateau = new int[5][5];
+        int[][] plateau = generateBoats(5);
         int trouve = 0;
 
         Random rdm = new Random();
         Scanner sc = new Scanner(System.in);
 
 
-        // Génération des bateaux
-        for (int i = 0; i < 5; i++) { // attention, proba d'infini
-            int x = rdm.nextInt( 5 ), y = rdm.nextInt( 5 );
-            if( plateau[x][y] != 2 )
-                plateau[x][y] = 2;
-            else
-                i--;
-        }
+
 
         display(plateau);
 
@@ -62,7 +54,7 @@ public class ToucheCoule2 {
                 if(plateau[choixX][choixY] % 2 == 1)
                     System.out.println("déjà choisi");
 
-            // Si la case est déjà
+                // Si la case est déjà
             } while ( plateau[choixX][choixY] % 2 == 1 );
             // A partir d'ici la case choisie ne peut etre que 0(eau pas découverte) ou 2(bateau pas découverte)
             // endregion
@@ -85,6 +77,34 @@ public class ToucheCoule2 {
         displayFound(plateau);
         System.out.println("C'est gagné");
 
+    }
+
+    public static int[][] generateBoats(int size){
+
+        Random rdm = new Random();
+        int[][] board = new int[size][size];
+        // Génération des bateaux
+        for (int i = 0; i < 5; i++) { // attention, proba d'infini
+            int x = rdm.nextInt( size ), y = rdm.nextInt( size );
+            if( board[x][y] != 2 )
+                board[x][y] = 2;
+            else
+                i--;
+        }
+
+        return board;
+    }
+
+    public static int[][] generateBoats(int size,boolean a){
+
+        Random rdm = new Random();
+        int[][] board = new int[size][size];
+        Bateau[] boats = new Bateau[4];
+
+
+
+
+        return board;
     }
 
     public static void displayFound(int[][] plateau){
@@ -114,6 +134,4 @@ public class ToucheCoule2 {
         }
 
     }
-
-
 }

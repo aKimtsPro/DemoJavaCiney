@@ -1,9 +1,5 @@
 package be.bstorm.akimts.demo.oo;
 
-import be.bstorm.akimts.demo.exo.oo.Personne;
-
-import java.util.ArrayList;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -14,8 +10,7 @@ public class Main {
         produit.prix = 1;
         produit.qtt = 5;
 
-        Personne p = new Personne();
-        p.nom = "ok";
+//        p.nom = "ok";
 
         produit.restock( 5 );
 

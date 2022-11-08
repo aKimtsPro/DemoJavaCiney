@@ -18,4 +18,11 @@ public class Poisson extends EtreVivant {
             this.nbrNageoire = nbrNageoire;
         }
     }
+
+    @Override
+    public int seNourrir() {
+        double poid  = super.seNourrir();
+        System.out.println("Le poisson fait mnt " + poid + " kg");
+        return (int)poid;
+    }
 }

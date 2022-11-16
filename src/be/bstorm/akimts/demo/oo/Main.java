@@ -1,25 +1,23 @@
 package be.bstorm.akimts.demo.oo;
 
+import be.bstorm.akimts.demo.oo.enums.Carburant;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        Produit produit = new Produit();
-        produit.marque = "marc";
-        produit.nom = "modele";
-        produit.prix = 1;
-        produit.qtt = 5;
+        Voiture v = new Voiture( Carburant.ELECTRIQUE );
 
-//        p.nom = "ok";
+        Carburant carburant = v.getCarburant();
+        System.out.println(carburant.ordinal());
 
-        produit.restock( 5 );
+        Carburant[] allValues = Carburant.values();
+        Carburant stringToCarburant = Carburant.valueOf( "DIESEL" );
+        String carburantToString = v.getCarburant().toString();
 
-        Produit p2 = new Produit();
+        // Carburant random
+        Carburant random = Carburant.getRandom();
 
-        System.out.println( p2.marque ); // ?
-
-
-        Compte c = new Compte();
     }
 
 }

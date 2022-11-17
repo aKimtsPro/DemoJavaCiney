@@ -50,4 +50,5 @@ public class Chambre {
         if( nbrPlace > 0 )
             this.nbrPlace = nbrPlace;
     }
+
 }

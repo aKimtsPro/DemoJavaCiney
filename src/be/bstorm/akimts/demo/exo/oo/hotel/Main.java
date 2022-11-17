@@ -9,6 +9,13 @@ public class Main {
         System.out.println( chambre.hasTele() ? "a une télé" : "n'a pas de télé" );
         System.out.println( chambre.hasDoucheIta() ? "a une douche italienne" : "n'a pas de douche italienne" );
 
+        Chambre chambre2 = new Chambre( 101, TypeChambre.CONFORT, 1 );
+
+        Hotel h = new Hotel(2);
+        h.ajouter( chambre );
+        h.ajouter( chambre2 );
+
+        System.out.println(h);
     }
 
 }

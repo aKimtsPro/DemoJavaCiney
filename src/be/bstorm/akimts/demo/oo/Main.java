@@ -2,6 +2,8 @@ package be.bstorm.akimts.demo.oo;
 
 import be.bstorm.akimts.demo.oo.enums.Carburant;
 
+import java.util.LinkedList;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -17,6 +19,8 @@ public class Main {
 
         // Carburant random
         Carburant random = Carburant.getRandom();
+
+        LinkedList<Carburant> list = new LinkedList<>();
 
     }
 
